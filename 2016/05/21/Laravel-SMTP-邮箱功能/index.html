@@ -18,7 +18,7 @@
 
 配置：输入发送方
 发送：输出内容以及发送人">
-<meta property="og:updated_time" content="2016-05-21T00:27:36.091Z">
+<meta property="og:updated_time" content="2016-05-21T00:52:27.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Laravel SMTP 邮箱功能">
 <meta name="twitter:description" content="###Laravel SMTP 邮箱功能一句话，一句话，一句话，只需要一句话就能实现 SMTP 邮箱发送功能， Laravel 再次用自身的强悍功能捍卫了最优雅框架的美称。邮箱验证只需要两步
@@ -117,7 +117,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Laravel/" style="font-size: 20px;">Laravel</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/书单/" style="font-size: 10px;">书单</a> <a href="/tags/小说/" style="font-size: 20px;">小说</a> <a href="/tags/读书/" style="font-size: 20px;">读书</a>
+						<a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Laravel/" style="font-size: 15px;">Laravel</a> <a href="/tags/PHP/" style="font-size: 15px;">PHP</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/书单/" style="font-size: 10px;">书单</a> <a href="/tags/小说/" style="font-size: 15px;">小说</a> <a href="/tags/读书/" style="font-size: 15px;">读书</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
 					</div>
 				</section>
 				
@@ -224,9 +224,9 @@
 <ol>
 <li>配置：输入发送方</li>
 <li>发送：输出内容以及发送人<a id="more"></a>
-<h4 id="1-配置"><a href="#1-配置" class="headerlink" title="1. 配置"></a>1. 配置</h4>可以在  .env 上配置，也可以直接在 config/mail.php 上配置。<br>在 .env 上<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MAIL_DRIVER=smtp</span><br><span class="line">MAIL_HOST=smtp.163.com</span><br><span class="line">MAIL_PORT=25</span><br><span class="line">MAIL_USERNAME=***@163.com</span><br><span class="line">Mail_PASSWORD=****</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<h4 id="1-配置"><a href="#1-配置" class="headerlink" title="1. 配置"></a>1. 配置</h4><p>可以在  .env 上配置，也可以直接在 config/mail.php 上配置。<br>在 .env 上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MAIL_DRIVER=smtp</span><br><span class="line">MAIL_HOST=smtp.163.com</span><br><span class="line">MAIL_PORT=25</span><br><span class="line">MAIL_USERNAME=***@163.com</span><br><span class="line">Mail_PASSWORD=****</span><br></pre></td></tr></table></figure></p>
 <p>或者在 config/mail.php<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&apos;host&apos; =&gt; &apos;smtp.163.com&apos;,</span><br><span class="line">&apos;port&apos; =&gt; 25,</span><br><span class="line">&apos;from&apos; =&gt; array(&apos;address&apos; =&gt; &apos;***@163.com&apos;, &apos;name&apos; =&gt; &apos;TestMail&apos;),</span><br><span class="line">&apos;username&apos; =&gt; &apos;***@163.com&apos;, //邮件地址一致</span><br><span class="line">&apos;password&apos; =&gt; &apos;****&apos;,</span><br></pre></td></tr></table></figure></p>
 <p>from 里面定义的是发送方的邮箱和发送邮件的名字。( 记住是 SMTP 不是 STMP )</p>
 <h4 id="2-发送"><a href="#2-发送" class="headerlink" title="2. 发送"></a>2. 发送</h4><p>在控制器或者模型里，调用代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$data = [&apos;email&apos;=&gt;$email, &apos;name&apos;=&gt;$name, &apos;uid&apos;=&gt;$uid, &apos;activationcode&apos;=&gt;$code];</span><br><span class="line">Mail::send(&apos;activemail&apos;, $data, function($message) use($data)</span><br><span class="line">&#123;</span><br><span class="line">    $message-&gt;to($data[&apos;email&apos;], $data[&apos;name&apos;])-&gt;subject(&apos;欢迎注册我们的网站，请激活您的账号！&apos;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
