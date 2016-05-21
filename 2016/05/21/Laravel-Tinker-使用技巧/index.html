@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Laravel Tinker 使用技巧 | 王二麻子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Laravel tinker 使用技巧Tinker 是上面Tinker 是 Laravel 自带的一个命令行的 PHP 交互工具。Tinker只是在laravel中的名字，其实真名叫做psysh。">
+  <meta name="description" content="Laravel tinker 使用技巧Tinker 是什么Tinker 是 Laravel 自带的一个命令行的 PHP 交互工具。Tinker只是在laravel中的名字，其实真名叫做psysh。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Laravel Tinker 使用技巧">
 <meta property="og:url" content="http://yoursite.com/2016/05/21/Laravel-Tinker-使用技巧/index.html">
 <meta property="og:site_name" content="王二麻子的博客">
-<meta property="og:description" content="Laravel tinker 使用技巧Tinker 是上面Tinker 是 Laravel 自带的一个命令行的 PHP 交互工具。Tinker只是在laravel中的名字，其实真名叫做psysh。">
-<meta property="og:updated_time" content="2016-05-21T00:28:21.006Z">
+<meta property="og:description" content="Laravel tinker 使用技巧Tinker 是什么Tinker 是 Laravel 自带的一个命令行的 PHP 交互工具。Tinker只是在laravel中的名字，其实真名叫做psysh。">
+<meta property="og:updated_time" content="2016-05-21T00:58:06.660Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Laravel Tinker 使用技巧">
-<meta name="twitter:description" content="Laravel tinker 使用技巧Tinker 是上面Tinker 是 Laravel 自带的一个命令行的 PHP 交互工具。Tinker只是在laravel中的名字，其实真名叫做psysh。">
+<meta name="twitter:description" content="Laravel tinker 使用技巧Tinker 是什么Tinker 是 Laravel 自带的一个命令行的 PHP 交互工具。Tinker只是在laravel中的名字，其实真名叫做psysh。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -71,7 +71,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -211,7 +211,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Laravel-tinker-使用技巧"><a href="#Laravel-tinker-使用技巧" class="headerlink" title="Laravel tinker 使用技巧"></a>Laravel tinker 使用技巧</h3><h4 id="Tinker-是上面"><a href="#Tinker-是上面" class="headerlink" title="Tinker 是上面"></a>Tinker 是上面</h4><p><code>Tinker</code> 是 Laravel 自带的一个命令行的 PHP 交互工具。<br>Tinker只是在laravel中的名字，其实真名叫做<a href="https://github.com/bobthecow/psysh/" target="_blank" rel="external">psysh</a>。</p>
+        <h3 id="Laravel-tinker-使用技巧"><a href="#Laravel-tinker-使用技巧" class="headerlink" title="Laravel tinker 使用技巧"></a>Laravel tinker 使用技巧</h3><h4 id="Tinker-是什么"><a href="#Tinker-是什么" class="headerlink" title="Tinker 是什么"></a>Tinker 是什么</h4><p><code>Tinker</code> 是 Laravel 自带的一个命令行的 PHP 交互工具。<br>Tinker只是在laravel中的名字，其实真名叫做<a href="https://github.com/bobthecow/psysh/" target="_blank" rel="external">psysh</a>。</p>
 <a id="more"></a>
 <h4 id="显示执行的-mysql-语句"><a href="#显示执行的-mysql-语句" class="headerlink" title="显示执行的 mysql 语句"></a>显示执行的 mysql 语句</h4><p><code>tinker</code>是一款可以在命令行对数据库进行操作的强大工具，比如我们可以执行<code>$post = App\Models\Admin::first();</code><br>命令行会直接显示出数据库 admin 表里面第一行的字段。</p>
 <p>在命令行中执行 <code>DB::listen(function($query) { var_dump($query-&gt;sql); });</code> 再执行一次上面的命令，就能显示执行的 mysql 语句。</p>
